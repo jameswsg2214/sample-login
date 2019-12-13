@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
-import android.widget.EditText
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.demopro.RoomDb.SplootAppDB
@@ -16,13 +15,11 @@ import com.example.demopro.rx.RxAPICallHelper
 import com.example.demopro.rx.RxAPICallback
 import com.example.demopro.service.CommonServices
 import io.reactivex.Observable
-import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
 
     private var splootDB: SplootAppDB? = null
 
@@ -34,33 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         splootDB = SplootAppDB.getInstance(this)
 
-
-       /* val emailid = findViewById<EditText>(R.id.email_name)
-
-        val password = findViewById<EditText>(R.id.pass)*/
-
-
-
-
-
-
-
-        login.setOnClickListener {
-
-            Log.e("qwerty","${email_name.text.toString()}")
-
-            Process1(email_name.text.toString().trim(),pass.text.toString().trim())
-
-        }
-var user: String? = null
-    var pass: String? = null
-
-
-
-
-
-
-
+        Process1("email","password")
         //process for room db
 
 
